@@ -6,16 +6,14 @@ public class CatMovement : MonoBehaviour
 {
     private float horiMovement;
 
-    [SerializeField] float jumpHeight;
-    [SerializeField] float movementSpeed;
+    [SerializeField] float jumpHeight = 10f;
+    [SerializeField] float movementSpeed = 7f; 
 
     private Rigidbody2D catRB;
 
+    private bool jumping;
     void Start()
     {
-        jumpHeight = 14f; // temporary
-        movementSpeed = 7f; // also temporary
-
         catRB = GetComponent<Rigidbody2D>();
     }
 
@@ -25,9 +23,18 @@ public class CatMovement : MonoBehaviour
         horiMovement = Input.GetAxisRaw("Horizontal");
         catRB.velocity = new Vector2(horiMovement * movementSpeed, catRB.velocity.y);
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && !jumping)
         {
             catRB.velocity = new Vector2(catRB.velocity.x, jumpHeight);
+            jumping = true;
+        }
+     
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Platform"))
+        {
+            jumping = false;
         }
     }
 }
