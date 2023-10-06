@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/KarenStartScene.unity
     guid: db5dbccd4deb6fe428c1f144bd76d0b1
@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/KarenScene.unity
     guid: 55c4901b1ac3b9349bf8da4f97a4bd2f
   - enabled: 0
-    path: Assets/Scenes/KarenScene2.unity
-    guid: 28eba27e4d961194184eebb805c5e778
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/KarenScene 2.unity
     guid: 619ed542ace622c4d997d510b25d6c04
