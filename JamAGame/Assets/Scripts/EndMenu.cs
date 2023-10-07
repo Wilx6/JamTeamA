@@ -7,6 +7,6 @@ public class EndMenu : MonoBehaviour
 {
    public void RestartGame()
     {
-        SceneManager.LoadScene("KarenScene");
+        SceneManager.LoadScene("Start");
     }
 }
