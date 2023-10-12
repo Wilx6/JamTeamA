@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CatMovement : MonoBehaviour
 {
@@ -50,7 +51,10 @@ public class CatMovement : MonoBehaviour
             jumping = false;
             catAnim.SetBool("Jumping", false);
         }
-
+        if(other.gameObject.CompareTag("Finish"))
+        {
+            SceneManager.LoadScene("End");
+        }
     }
    
 }

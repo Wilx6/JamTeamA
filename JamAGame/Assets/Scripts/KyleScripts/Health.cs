@@ -34,6 +34,7 @@ public class Health : MonoBehaviour
         else
         {
             SoundManager.instance.PlaySound(deathSound);
+            SceneManager.LoadScene("End");
         }
     }
 }
